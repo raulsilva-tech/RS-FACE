@@ -356,3 +356,51 @@ AttributeError: 'NoneType' object has no attribute 'load_recognition'
 2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
 2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
 2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-20 21:16:10,537 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:10,537 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:10,537 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:10,537 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:10,567 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:10,567 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:10,567 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:10,567 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:15,454 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:15,454 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:15,454 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:15,454 - FACE RECOGNITION LOG - ERROR - module 'cv2' has no attribute 'color_bgr2hsv'
+2023-07-20 21:16:15,460 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:15,460 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:15,460 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
+2023-07-20 21:16:15,460 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\detect_stream.py", line 273, in get_frame
+    image = cv2.cvtColor( image,cv2.color_bgr2hsv)
+AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
+
