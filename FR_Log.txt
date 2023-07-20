@@ -1,0 +1,358 @@
+2023-07-04 12:45:35,726 - FACE RECOGNITION LOG - ERROR - unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+2023-07-04 12:45:35,726 - FACE RECOGNITION LOG - ERROR - unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+2023-07-04 12:45:35,726 - FACE RECOGNITION LOG - ERROR - unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+2023-07-04 12:45:35,726 - FACE RECOGNITION LOG - ERROR - unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+2023-07-04 12:45:35,726 - FACE RECOGNITION LOG - ERROR - unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+2023-07-04 12:45:35,732 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 93, in __init__
+    showTime("1")
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 30, in showTime
+    print(datetime.now()+ " - "+ description)
+TypeError: unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+
+2023-07-04 12:45:35,732 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 93, in __init__
+    showTime("1")
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 30, in showTime
+    print(datetime.now()+ " - "+ description)
+TypeError: unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+
+2023-07-04 12:45:35,732 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 93, in __init__
+    showTime("1")
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 30, in showTime
+    print(datetime.now()+ " - "+ description)
+TypeError: unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+
+2023-07-04 12:45:35,732 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 93, in __init__
+    showTime("1")
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 30, in showTime
+    print(datetime.now()+ " - "+ description)
+TypeError: unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+
+2023-07-04 12:45:35,732 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 93, in __init__
+    showTime("1")
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 30, in showTime
+    print(datetime.now()+ " - "+ description)
+TypeError: unsupported operand type(s) for +: 'datetime.datetime' and 'str'
+
+2023-07-04 12:50:04,600 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 12:50:04,600 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 12:50:04,600 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 12:50:04,600 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 12:50:04,600 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 12:50:04,608 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 136, in __init__
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 12:50:04,608 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 136, in __init__
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 12:50:04,608 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 136, in __init__
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 12:50:04,608 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 136, in __init__
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 12:50:04,608 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 136, in __init__
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 13:07:21,745 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:21,745 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:21,745 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:21,745 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:21,745 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:21,748 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:21,748 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:21,748 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:21,748 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:21,748 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:22,379 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:22,379 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:22,379 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:22,379 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:22,379 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:22,382 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:22,382 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:22,382 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:22,382 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:24,272 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:24,272 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:24,272 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:24,272 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:24,278 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:24,278 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:24,278 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:24,278 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:27,720 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:27,720 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:27,720 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:27,720 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:27,730 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:27,730 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:27,730 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:27,730 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:28,131 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:28,131 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:28,131 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:28,131 - FACE RECOGNITION LOG - ERROR - can only concatenate str (not "float") to str
+2023-07-04 13:07:28,155 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:28,155 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:28,155 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:28,155 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 35, in showTime
+    print(str(new_time) + " - " + description + " - Diff: " + diff.total_seconds())
+TypeError: can only concatenate str (not "float") to str
+
+2023-07-04 13:07:28,166 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 13:07:28,166 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 13:07:28,166 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 13:07:28,166 - FACE RECOGNITION LOG - ERROR - [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+2023-07-04 13:07:28,173 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 150, in __init__
+    self.indexes = np.load(main_path + self.indexes_file_name, allow_pickle=True)
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 13:07:28,173 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 150, in __init__
+    self.indexes = np.load(main_path + self.indexes_file_name, allow_pickle=True)
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 13:07:28,173 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 150, in __init__
+    self.indexes = np.load(main_path + self.indexes_file_name, allow_pickle=True)
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 13:07:28,173 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 150, in __init__
+    self.indexes = np.load(main_path + self.indexes_file_name, allow_pickle=True)
+  File "C:\applications\dkface_env\lib\site-packages\numpy\lib\npyio.py", line 405, in load
+    fid = stack.enter_context(open(os_fspath(file), "rb"))
+FileNotFoundError: [Errno 2] No such file or directory: 'files/DK_indexes.pickle'
+
+2023-07-04 13:59:35,315 - FACE RECOGNITION LOG - ERROR - 'RecognitionCamera' object has no attribute 'hog_detector'
+2023-07-04 13:59:35,315 - FACE RECOGNITION LOG - ERROR - 'RecognitionCamera' object has no attribute 'hog_detector'
+2023-07-04 13:59:35,315 - FACE RECOGNITION LOG - ERROR - 'RecognitionCamera' object has no attribute 'hog_detector'
+2023-07-04 13:59:35,315 - FACE RECOGNITION LOG - ERROR - 'RecognitionCamera' object has no attribute 'hog_detector'
+2023-07-04 13:59:35,330 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 130, in __init__
+    if self.hog_detector is None:
+AttributeError: 'RecognitionCamera' object has no attribute 'hog_detector'
+
+2023-07-04 13:59:35,330 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 130, in __init__
+    if self.hog_detector is None:
+AttributeError: 'RecognitionCamera' object has no attribute 'hog_detector'
+
+2023-07-04 13:59:35,330 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 130, in __init__
+    if self.hog_detector is None:
+AttributeError: 'RecognitionCamera' object has no attribute 'hog_detector'
+
+2023-07-04 13:59:35,330 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 279, in app_load_recognition
+    rec_camera = RecognitionCamera(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 130, in __init__
+    if self.hog_detector is None:
+AttributeError: 'RecognitionCamera' object has no attribute 'hog_detector'
+
+2023-07-04 14:45:04,066 - FACE RECOGNITION LOG - ERROR - 'NoneType' object has no attribute 'load_recognition'
+2023-07-04 14:45:04,066 - FACE RECOGNITION LOG - ERROR - 'NoneType' object has no attribute 'load_recognition'
+2023-07-04 14:45:04,066 - FACE RECOGNITION LOG - ERROR - 'NoneType' object has no attribute 'load_recognition'
+2023-07-04 14:45:04,066 - FACE RECOGNITION LOG - ERROR - 'NoneType' object has no attribute 'load_recognition'
+2023-07-04 14:45:04,081 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 282, in app_load_recognition
+    rec_camera.load_recognition(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+AttributeError: 'NoneType' object has no attribute 'load_recognition'
+
+2023-07-04 14:45:04,081 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 282, in app_load_recognition
+    rec_camera.load_recognition(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+AttributeError: 'NoneType' object has no attribute 'load_recognition'
+
+2023-07-04 14:45:04,081 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 282, in app_load_recognition
+    rec_camera.load_recognition(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+AttributeError: 'NoneType' object has no attribute 'load_recognition'
+
+2023-07-04 14:45:04,081 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\main.py", line 282, in app_load_recognition
+    rec_camera.load_recognition(camera_id, width, height, upsample_rate, files_dir, threshold, rec_frame_rate,
+AttributeError: 'NoneType' object has no attribute 'load_recognition'
+
+2023-07-04 14:50:10,286 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,286 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,286 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,286 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,308 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,308 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,308 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:10,308 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,257 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,257 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,257 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,257 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,281 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,281 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,281 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:50:53,281 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,463 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,463 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,463 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,463 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,506 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,506 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,506 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 14:59:52,506 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 0 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,775 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,775 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,775 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,775 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,800 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,800 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,800 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:12,800 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,627 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,627 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,627 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,627 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
+2023-07-04 15:12:19,670 - FACE RECOGNITION LOG - ERROR - Não foi possível obter o frame da câmera 1 . Verifique se a mesma foi/está desconectada.
