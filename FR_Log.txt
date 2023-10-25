@@ -404,3 +404,123 @@ AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
     image = cv2.cvtColor( image,cv2.color_bgr2hsv)
 AttributeError: module 'cv2' has no attribute 'color_bgr2hsv'
 
+2023-10-18 22:53:31,999 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:31,999 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:31,999 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:31,999 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:32,018 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:32,018 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:32,018 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:32,018 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:37,114 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:37,114 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:37,114 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:37,114 - FACE RECOGNITION LOG - ERROR - name 'image_raw' is not defined
+2023-10-18 22:53:37,118 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:37,118 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:37,118 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 22:53:37,118 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 522, in checkTrueFace
+    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+NameError: name 'image_raw' is not defined
+
+2023-10-18 23:40:44,876 - FACE RECOGNITION LOG - ERROR - local variable 'cls' referenced before assignment
+2023-10-18 23:40:44,876 - FACE RECOGNITION LOG - ERROR - local variable 'cls' referenced before assignment
+2023-10-18 23:40:44,876 - FACE RECOGNITION LOG - ERROR - local variable 'cls' referenced before assignment
+2023-10-18 23:40:44,876 - FACE RECOGNITION LOG - ERROR - local variable 'cls' referenced before assignment
+2023-10-18 23:40:44,884 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 537, in checkTrueFace
+    return cls, conf
+UnboundLocalError: local variable 'cls' referenced before assignment
+
+2023-10-18 23:40:44,884 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 537, in checkTrueFace
+    return cls, conf
+UnboundLocalError: local variable 'cls' referenced before assignment
+
+2023-10-18 23:40:44,884 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 537, in checkTrueFace
+    return cls, conf
+UnboundLocalError: local variable 'cls' referenced before assignment
+
+2023-10-18 23:40:44,884 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 537, in checkTrueFace
+    return cls, conf
+UnboundLocalError: local variable 'cls' referenced before assignment
+
+2023-10-18 23:40:44,889 - FACE RECOGNITION LOG - ERROR - cannot unpack non-iterable NoneType object
+2023-10-18 23:40:44,889 - FACE RECOGNITION LOG - ERROR - cannot unpack non-iterable NoneType object
+2023-10-18 23:40:44,889 - FACE RECOGNITION LOG - ERROR - cannot unpack non-iterable NoneType object
+2023-10-18 23:40:44,889 - FACE RECOGNITION LOG - ERROR - cannot unpack non-iterable NoneType object
+2023-10-18 23:40:44,894 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 414, in get_frame
+    cls, conf = self.checkTrueFace(image_raw)
+TypeError: cannot unpack non-iterable NoneType object
+
+2023-10-18 23:40:44,894 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 414, in get_frame
+    cls, conf = self.checkTrueFace(image_raw)
+TypeError: cannot unpack non-iterable NoneType object
+
+2023-10-18 23:40:44,894 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 414, in get_frame
+    cls, conf = self.checkTrueFace(image_raw)
+TypeError: cannot unpack non-iterable NoneType object
+
+2023-10-18 23:40:44,894 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 414, in get_frame
+    cls, conf = self.checkTrueFace(image_raw)
+TypeError: cannot unpack non-iterable NoneType object
+
+2023-10-19 00:21:00,644 - FACE RECOGNITION LOG - ERROR - bad allocation
+2023-10-19 00:21:00,644 - FACE RECOGNITION LOG - ERROR - bad allocation
+2023-10-19 00:21:00,644 - FACE RECOGNITION LOG - ERROR - bad allocation
+2023-10-19 00:21:00,644 - FACE RECOGNITION LOG - ERROR - bad allocation
+2023-10-19 00:21:00,657 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 434, in get_frame
+    facial_descriptors = self.recognizer.compute_face_descriptor(image, facial_points)
+MemoryError: bad allocation
+
+2023-10-19 00:21:00,657 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 434, in get_frame
+    facial_descriptors = self.recognizer.compute_face_descriptor(image, facial_points)
+MemoryError: bad allocation
+
+2023-10-19 00:21:00,657 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 434, in get_frame
+    facial_descriptors = self.recognizer.compute_face_descriptor(image, facial_points)
+MemoryError: bad allocation
+
+2023-10-19 00:21:00,657 - FACE RECOGNITION LOG - ERROR - Traceback (most recent call last):
+  File "C:\Users\raulp\PycharmProjects\DKFaceFinal\recognize_stream.py", line 434, in get_frame
+    facial_descriptors = self.recognizer.compute_face_descriptor(image, facial_points)
+MemoryError: bad allocation
+

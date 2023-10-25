@@ -1,3 +1,6 @@
+import math
+
+import cvzone
 import dlib
 import cv2
 import numpy as np
@@ -10,6 +13,7 @@ import platform
 from datetime import datetime
 
 from imutils import face_utils
+from ultralytics import YOLO
 
 logger = logging.getLogger("FACE RECOGNITION LOG")
 logger.setLevel(logging.ERROR)
@@ -28,8 +32,7 @@ status = 0
 last_time = datetime.now()
 
 
-def showTime(description):
-
+def show_time(description):
     global last_time
 
     try:
@@ -106,7 +109,7 @@ class RecognitionCamera(object):
 
             loading_status = "B"  ##BUSY
 
-            showTime("1")
+            show_time("1")
             # capturing video
             # instanciando variavel de acesso à webcam
             os_name = platform.system().lower()
@@ -125,15 +128,15 @@ class RecognitionCamera(object):
             self.train_file_name = "DK_trainedFacialDescriptors.npy"
             self.indexes_file_name = "DK_indexes.pickle"
 
-            showTime("pre hog detector")
+            # showTime("pre hog detector")
             # obtendo detector de face padrão do DLIB
             self.hog_detector = dlib.get_frontal_face_detector()
 
-            showTime("pre shape predictor")
+            # showTime("pre shape predictor")
             # obtendo detector de pontos faciais
             self.detector_points = dlib.shape_predictor(main_path + shape_predictor)
 
-            showTime("pre recognizer")
+            show_time("pre recognizer")
             # obtendo reconhecedor (extraidor de descritores faciais)
             self.recognizer = dlib.face_recognition_model_v1(main_path + recognizer_model)
 
@@ -149,13 +152,13 @@ class RecognitionCamera(object):
 
             self.threshold = threshold
 
-            showTime("Pre updateFaces")
+            show_time("Pre updateFaces")
 
             # carregando faces treinadas
             self.indexes = np.load(main_path + self.indexes_file_name, allow_pickle=True)
             self.trained_faces = np.load(main_path + self.train_file_name, allow_pickle=True)
 
-            showTime("POS updateFaces")
+            show_time("POS updateFaces")
 
             self.bgr = (255, 255, 255)  # branco
 
@@ -175,7 +178,6 @@ class RecognitionCamera(object):
             last_user_id = 0
             user_name = ""
 
-
             # define two constants, one for the eye aspect ratio to indicate
             # blink and then a second constant for the number of consecutive
             # frames the eye must be below the threshold
@@ -192,6 +194,11 @@ class RecognitionCamera(object):
             self.users_that_blinked = {}
             self.last_distance = " "
 
+            self.model = YOLO("../files/l_version_1_300.pt")
+            self.classNames = ["fake", "real"]
+            self.confidence = 0.6
+            results = self.model(None, stream=True, verbose=False)
+
             loading_status = "F"  # FREE
             print("RecognitionCamera loaded...")
         else:
@@ -205,7 +212,7 @@ class RecognitionCamera(object):
         print("--- camera release ---")
 
     def load_recognition(self, camera, res_width, res_height, upsample_rate, main_path, threshold, recognition_rate,
-                 finish_when_found, eye_threshold, eye_consec_frames):
+                         finish_when_found, eye_threshold, eye_consec_frames):
         global loading_status
 
         if loading_status != "B":
@@ -215,7 +222,7 @@ class RecognitionCamera(object):
 
             loading_status = "B"  ##BUSY
 
-            showTime("1")
+            show_time("1")
             # capturing video
             # instanciando variavel de acesso à webcam
             os_name = platform.system().lower()
@@ -240,13 +247,13 @@ class RecognitionCamera(object):
 
             self.threshold = threshold
 
-            showTime("Pre updateFaces")
+            show_time("Pre updateFaces")
 
             # carregando faces treinadas
             self.indexes = np.load(main_path + self.indexes_file_name, allow_pickle=True)
             self.trained_faces = np.load(main_path + self.train_file_name, allow_pickle=True)
 
-            showTime("POS updateFaces")
+            show_time("POS updateFaces")
 
             self.bgr = (255, 255, 255)  # branco
 
@@ -288,11 +295,11 @@ class RecognitionCamera(object):
             print("RecognitionCamera is busy...")
 
     def update_trained_faces(self):
-        showTime("Pre updateFaces")
+        show_time("Pre updateFaces")
         # carregando faces treinadas
         self.indexes = np.load(self.main_path + self.indexes_file_name, allow_pickle=True)
         self.trained_faces = np.load(self.main_path + self.train_file_name, allow_pickle=True)
-        showTime("POS updateFaces")
+        show_time("POS updateFaces")
 
     def new_gamma_image(self, image, gamma):
         # build a lookup table mapping the pixel values [0, 255] to
@@ -361,7 +368,7 @@ class RecognitionCamera(object):
                                     cv2.LINE_4)
                     else:
                         warning = "Mais de uma face encontrada."
-                        warning2 = "Somente mantenha uma pessoa na imagem."
+                        warning2 = "Mantenha somente uma pessoa na imagem."
                         cv2.putText(image_raw, warning, (30, top), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1,
                                     cv2.LINE_4)
                         cv2.putText(image_raw, warning2, (30, top + 15), cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 0, 255), 1,
@@ -370,6 +377,8 @@ class RecognitionCamera(object):
 
 
                 else:  # 1 face encontrada
+
+                    show_shape = True
 
                     face = faces[0]
 
@@ -384,86 +393,111 @@ class RecognitionCamera(object):
 
                     # cheque piscada de olhos assim que o usuário for reconhecido
                     if last_user_id > 0 and self.users_that_blinked.get(last_user_id) is None:
-
-                        self.checkEyes(image_raw, facial_points)
+                        show_shape = False
+                        self.check_eyes(image_raw, facial_points)
 
                         # usuário reconhecido piscou?
                         blink_status = self.users_that_blinked.get(last_user_id)
 
                         if blink_status == 1:
 
-                            # self.bgr = (0, 140, 255)  # laranja
-                            self.bgr = (0, 255, 0)  # verde
+                            self.bgr = (0, 140, 255)  # laranja
+                            # self.bgr = (0, 255, 0)  # verde
 
                         else:
                             self.bgr = (0, 255, 255)  # amarelo
                     else:
 
+                        if last_user_id > 0 and self.users_that_blinked.get(last_user_id) is not None:
+                            show_shape = False
+
                         if self.frame_count % self.recognition_rate == 0 or self.frame_count == 1:
 
-                            # showDiff("Depois DetectorPoints")
+                            # if last_user_id > 0 and self.users_that_blinked.get(last_user_id) is not None:
+                            if not show_shape:
+                                cls, conf = self.check_true_face(image_raw)
 
-                            # obtendo caracteristicas principais da face
-                            facial_descriptors = self.recognizer.compute_face_descriptor(image, facial_points)
-
-                            # showDiff("Depois Recognizer")
-
-                            # transformando caracteristicas em uma lista
-                            facial_descriptors_list = [fd for fd in facial_descriptors]
-                            # lista para array numpy
-                            facial_descriptors_np_array = np.asarray(facial_descriptors_list, dtype=np.float64)
-                            # adicionando nova "coluna" ao array numpy
-                            facial_descriptors_np_array = facial_descriptors_np_array[np.newaxis, :]
-
-                            # obtendo a distancia de TODAS AS IMAGENS TREINADAS em comparação à recebida
-                            distances = np.linalg.norm(facial_descriptors_np_array - self.trained_faces, axis=1)
-
-                            # obtendo o elemento com a MENOR distância (quanto menor mais proxima)
-                            closest_element = np.argmin(distances)
-
-                            # obtendo valor da menor distancia
-                            closest_element_distance = distances[closest_element]
-                            self.last_distance = str(closest_element_distance.round(3))
-
-                            if closest_element_distance <= self.threshold:
-                                # nome padrão imagens: User.UserId.UserName.ImageId.png. Ex: User.457.Joao.5.png
-                                last_user_id = int(os.path.split(self.indexes[closest_element])[1].split(".")[1])
-                                user_name = str(os.path.split(self.indexes[closest_element])[1].split(".")[2])
-                                self.text = str(last_user_id) + " - " + user_name  # + " - " + str(
-                                #   closest_element_distance.round(3))
-
-                                # usuário reconhecido piscou?
-                                blink_status = self.users_that_blinked.get(last_user_id)
-
-                                if blink_status == 1:
-                                    user = {last_user_id: 2}
-                                    self.users_that_blinked.update(user)
-                                    self.bgr = (0, 255, 0)  # verde
-                                elif blink_status == 2:
-                                    self.bgr = (0, 255, 0)  # verde
+                                if cls is not None and conf is not None:
+                                    self.text = f'{self.classNames[cls].upper()} {int(conf * 100)}%'
+                                    if conf > self.confidence:
+                                        if self.classNames[cls] == 'real':
+                                            self.bgr = (0, 255, 0)  # verde
+                                        else:
+                                            self.bgr = (0, 0, 255)  # vermelho
+                                    else:
+                                        self.bgr = (0, 0, 0)  # preto
                                 else:
-                                    self.bgr = (0, 255, 255)  # amarelo
-
-
+                                    self.bgr = (255,255,255)  # branco
                             else:
-                                last_user_id = 0;
-                                self.text = 'Desconhecido '
-                                self.bgr = (0, 0, 255)
-                                self.users_that_blinked.clear()
+                                # showDiff("Depois DetectorPoints")
 
-                    y = top - 15 if top - 15 > 15 else top + 15
-                    cv2.rectangle(image_raw, (left, top), (right, bottom), self.bgr, 1)
+                                # obtendo caracteristicas principais da face
+                                facial_descriptors = self.recognizer.compute_face_descriptor(image, facial_points)
 
-                    cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
-                    cv2.putText(image_raw, self.last_distance, (self.res_width - 100, self.res_height - 30),
-                                cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
-                    # loop over the (x, y)-coordinates for the facial landmarks
-                    # and draw them on the image
-                    for (x, y) in shape:
-                        cv2.circle(image_raw, (x, y), 1, (255, 255, 255), -1)
+                                # showDiff("Depois Recognizer")
 
-                # resized_frame = cv2.resize(image, (self.window_width, self.window_height),
-                #                          interpolation=cv2.INTER_AREA)
+                                # transformando caracteristicas em uma lista
+                                facial_descriptors_list = [fd for fd in facial_descriptors]
+                                # lista para array numpy
+                                facial_descriptors_np_array = np.asarray(facial_descriptors_list, dtype=np.float64)
+                                # adicionando nova "coluna" ao array numpy
+                                facial_descriptors_np_array = facial_descriptors_np_array[np.newaxis, :]
+
+                                # obtendo a distancia de TODAS AS IMAGENS TREINADAS em comparação à recebida
+                                distances = np.linalg.norm(facial_descriptors_np_array - self.trained_faces, axis=1)
+
+                                # obtendo o elemento com a MENOR distância (quanto menor mais proxima)
+                                closest_element = np.argmin(distances)
+
+                                # obtendo valor da menor distancia
+                                closest_element_distance = distances[closest_element]
+                                self.last_distance = str(closest_element_distance.round(3))
+
+                                if closest_element_distance <= self.threshold:
+                                    # nome padrão imagens: User.UserId.UserName.ImageId.png. Ex: User.457.Joao.5.png
+                                    last_user_id = int(os.path.split(self.indexes[closest_element])[1].split(".")[1])
+                                    user_name = str(os.path.split(self.indexes[closest_element])[1].split(".")[2])
+                                    self.text = str(last_user_id) + " - " + user_name  # + " - " + str(
+                                    #   closest_element_distance.round(3))
+
+                                    # usuário reconhecido piscou?
+                                    blink_status = self.users_that_blinked.get(last_user_id)
+
+                                    if blink_status == 1:
+                                        user = {last_user_id: 2}
+                                        self.users_that_blinked.update(user)
+                                        self.bgr = (0, 255, 0)  # verde
+                                    elif blink_status == 2:
+                                        self.bgr = (0, 255, 0)  # verde
+                                    else:
+                                        self.bgr = (0, 255, 255)  # amarelo
+
+
+                                else:
+                                    last_user_id = 0;
+                                    self.text = 'Desconhecido '
+                                    self.bgr = (0, 0, 255)
+                                    self.users_that_blinked.clear()
+
+
+
+                    # y = top - 15 if top - 15 > 15 else top + 15
+                    # cv2.rectangle(image_raw, (left, top), (right, bottom), self.bgr, 1)
+                    #
+                    # cv2.putText(image_raw, self.text, (left, y), cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+                    # cv2.putText(image_raw, self.last_distance, (self.res_width - 100, self.res_height - 30),
+                    #             cv2.FONT_HERSHEY_SIMPLEX, 0.6, self.bgr, 1, cv2.LINE_8)
+
+                    cvzone.cornerRect(image_raw, (left, top, right-left, bottom-top), colorC=self.bgr, colorR=self.bgr)
+                    cvzone.putTextRect(image_raw, self.text, (max(0, left), max(35, top)), scale=2, thickness=4,
+                                       colorR=self.bgr,
+                                       colorB=self.bgr)
+
+                    if show_shape:
+                        # loop over the (x, y)-coordinates for the facial landmarks
+                        # and draw them on the image
+                        for (x, y) in shape:
+                            cv2.circle(image_raw, (x, y), 1, (255, 255, 255), -1)
 
 
             else:
@@ -484,7 +518,33 @@ class RecognitionCamera(object):
             logger.error(str(e))
             logger.error(traceback.format_exc())
 
-    def checkEyes(self, image_raw, facial_points):
+    def check_true_face(self, img):
+        cls = None
+        conf = None
+        # show_time("pre model yolo")
+        results = self.model(img, stream=True, verbose=False)
+        show_time("pos model yolo")
+        for r in results:
+            boxes = r.boxes
+            for box in boxes:
+                # Confidence
+                conf = math.ceil((box.conf[0] * 100)) / 100
+                # Class Name
+                cls = int(box.cls[0])
+                # if conf > self.confidence:
+                #
+                #     # if self.classNames[cls] == 'real':
+                #     #     color = (0, 255, 0)
+                #     # else:
+                #     #     color = (0, 0, 255)
+
+        # cv2.putText(img, f'{self.classNames[cls].upper()} {int(conf * 100)}%', (self.res_width - 100, 30),
+        #             cv2.FONT_HERSHEY_SIMPLEX, 0.6, color, 1, cv2.LINE_8)
+
+        show_time("pre return")
+        return cls, conf
+
+    def check_eyes(self, image_raw, facial_points):
 
         global last_user_id
 
@@ -498,8 +558,8 @@ class RecognitionCamera(object):
         # coordinates to compute the eye aspect ratio for both eyes
         leftEye = shape[self.lStart:self.lEnd]
         rightEye = shape[self.rStart:self.rEnd]
-        leftEAR = eye_aspect_ratio(leftEye)
-        rightEAR = eye_aspect_ratio(rightEye)
+        leftEAR = self.eye_aspect_ratio(leftEye)
+        rightEAR = self.eye_aspect_ratio(rightEye)
 
         # average the eye aspect ratio together for both eyes
         ear = (leftEAR + rightEAR) / 2.0
@@ -538,19 +598,18 @@ class RecognitionCamera(object):
         cv2.putText(image_raw, "{:.2f}".format(ear), (self.res_width - 100, 30),
                     cv2.FONT_HERSHEY_SIMPLEX, 0.6, (255, 255, 255), 1, cv2.LINE_8)
 
+    def eye_aspect_ratio(self, eye):
+        # compute the euclidean distances between the two sets of
+        # vertical eye landmarks (x, y)-coordinates
+        A = dist.euclidean(eye[1], eye[5])
+        B = dist.euclidean(eye[2], eye[4])
 
-def eye_aspect_ratio(eye):
-    # compute the euclidean distances between the two sets of
-    # vertical eye landmarks (x, y)-coordinates
-    A = dist.euclidean(eye[1], eye[5])
-    B = dist.euclidean(eye[2], eye[4])
+        # compute the euclidean distance between the horizontal
+        # eye landmark (x, y)-coordinates
+        C = dist.euclidean(eye[0], eye[3])
 
-    # compute the euclidean distance between the horizontal
-    # eye landmark (x, y)-coordinates
-    C = dist.euclidean(eye[0], eye[3])
+        # compute the eye aspect ratio
+        ear = (A + B) / (2.0 * C)
 
-    # compute the eye aspect ratio
-    ear = (A + B) / (2.0 * C)
-
-    # return the eye aspect ratio
-    return ear
+        # return the eye aspect ratio
+        return ear

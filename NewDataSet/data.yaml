@@ -1,0 +1,13 @@
+train: ../train/images
+val: ../valid/images
+test: ../test/images
+
+nc: 4
+names: ['device', 'live', 'mask', 'photo']
+
+roboflow:
+  workspace: project-iorgd
+  project: -1-ltpzf
+  version: 1
+  license: CC BY 4.0
+  url: https://universe.roboflow.com/project-iorgd/-1-ltpzf/dataset/1
